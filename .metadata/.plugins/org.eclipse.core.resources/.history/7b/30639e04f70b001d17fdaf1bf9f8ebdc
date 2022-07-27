@@ -1,0 +1,20 @@
+package com.example.demo.service;
+
+import org.springframework.stereotype.Service;
+
+import com.example.demo.entity.House;
+import com.example.demo.repository.HouseRepository;
+
+@Service
+public class HouseServiceImpl implements HouseService{
+
+	private HouseRepository houseRepository;
+	
+	@Override
+	public House saveHouse(House house) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

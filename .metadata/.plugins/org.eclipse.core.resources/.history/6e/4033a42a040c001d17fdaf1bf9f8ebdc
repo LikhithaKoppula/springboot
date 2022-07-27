@@ -1,0 +1,23 @@
+package com.example.demo.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.entity.House;
+import com.example.demo.service.HouseService;
+
+@RestController
+public class HouseController {
+	
+	@Autowired
+	private HouseService houseService;
+	
+	@PostMapping("/allHouses")
+	public House saveHouses(@RequestBody House house) {
+		
+		return houseService.saveHouses(house);
+	}
+
+}

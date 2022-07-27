@@ -1,0 +1,23 @@
+package com.example.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.entity.House;
+import com.example.demo.repository.HouseRepository;
+
+@Service
+public class HouseServiceImpl implements HouseService{
+
+	@Autowired
+	private HouseRepository houseRepository;
+	
+	@Override
+	public House saveHouses(House house) {
+		// TODO Auto-generated method stub
+		return houseRepository.save(House)
+		
+	}
+
+	
+}

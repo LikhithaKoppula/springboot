@@ -1,0 +1,17 @@
+package com.example.demo.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.example.demo.entity.House;
+
+@Repository
+public interface HouseRepository extends JpaRepository<House, String> {
+	//public House saveHouses(House house);
+	
+     public House findByType(String type);	
+     public House findStringById(String houseId);
+     public House deleteStringById(String houseId);
+}

@@ -1,0 +1,61 @@
+package com.example.demo.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class House {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType)
+	private Long houseId;
+	private Long houseNo;
+	private String status;
+	private String type;
+	
+	public Long getHouseId() {
+		return houseId;
+	}
+	public void setHouseId(Long houseId) {
+		this.houseId = houseId;
+	}
+	public Long getHouseNo() {
+		return houseNo;
+	}
+	public void setHouseNo(Long houseNo) {
+		this.houseNo = houseNo;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public House(Long houseId, Long houseNo, String status, String type) {
+		super();
+		this.houseId = houseId;
+		this.houseNo = houseNo;
+		this.status = status;
+		this.type = type;
+	}
+	
+	public House() {
+		
+	}
+	@Override
+	public String toString() {
+		return "House [houseId=" + houseId + ", houseNo=" + houseNo + ", status=" + status + ", type=" + type + "]";
+	}
+	
+	
+	
+
+}

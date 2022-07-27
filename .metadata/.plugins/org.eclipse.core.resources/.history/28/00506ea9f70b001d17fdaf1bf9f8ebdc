@@ -1,0 +1,9 @@
+package com.example.demo.service;
+
+import com.example.demo.entity.House;
+
+public interface HouseService {
+	
+	public House saveHouse(House house);
+
+}

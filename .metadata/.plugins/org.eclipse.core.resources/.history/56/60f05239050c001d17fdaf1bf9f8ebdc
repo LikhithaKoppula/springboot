@@ -1,0 +1,11 @@
+package com.example.demo.service;
+
+import com.example.demo.entity.House;
+
+public interface HouseService {
+	
+	public House saveHouses(House house);
+	public List<House>fetchAllHouseList();
+	
+
+}
